@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono>
+#include <random>
 
 using std::cout;
 using std::cin;
@@ -14,7 +15,7 @@ typedef struct Node{
     
     int iNum;
     Node* ptrNext;
-    Node* ptrBefore;
+    Node* ptrPrev;
 }Node;
 
 Node* newNode(int);
@@ -22,22 +23,22 @@ void addElementEnd(Node**,int);
 void showNode(Node*);
 void swapValue(Node*,Node*);
 void bubbleSort(Node*, int);
+void randomList(Node*&, int);
 
 int main()
 {
     Node* node = nullptr;
-    addElementEnd(&node, 999);
-    addElementEnd(&node, 123);
-    addElementEnd(&node, 1);
-    addElementEnd(&node, 14);
-    addElementEnd(&node, 9);
-    addElementEnd(&node, 2);
-    bubbleSort(node,6);
-    showNode(node);
-
+    randomList(node,1000); //função que cria nós aleatorios
     
+    auto timeStart = high_resolution_clock::now();
+    bubbleSort(node,1000);
+    auto timeStop = high_resolution_clock::now();//medindo tempo de execução
+
+    auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+    cout<<"tempo de compilaçao = "<<timeDuration.count()<<endl;
     return 0;
 }
+
 Node* newNode(int iValor)
 {
     Node* ptrTemp = (Node*)malloc(sizeof(Node)); //Alocando memória
@@ -62,7 +63,7 @@ void addElementEnd(Node** list, int iValor)
             ptrCurrent = ptrCurrent->ptrNext;//Levando o ponteiro pro final da lista
         }
         ptrCurrent->ptrNext = ptrTemp;
-        ptrTemp->ptrBefore = ptrCurrent;//Atualizando os parâmetros
+        ptrTemp->ptrPrev = ptrCurrent;//Atualizando os parâmetros
     }
 }
 
@@ -72,7 +73,7 @@ void showNode(Node* list)
     {
         cout<<"Lista inválida"<<endl;
     }
-    else if(list->ptrBefore != nullptr)
+    else if(list->ptrPrev != nullptr)
     {
         cout<<"Estamos no meio da lista"<<endl;
     }
@@ -85,6 +86,7 @@ void showNode(Node* list)
             cout<<ptrCurrent->iNum<<" ";
             ptrCurrent = ptrCurrent->ptrNext;//Atualizando o nó
         }
+        cout<<endl;
         
     }
 }
@@ -123,5 +125,16 @@ void bubbleSort(Node* lista,int iSize)
         bubbleSort(lista,iSize-1); /*como o vetor não esta ordenado repetiremos o método para o vetor sem o ultimo elemento, 
         ele já esta na sua posição*/
     }
+}
 
+void randomList(Node* &lista, int iAmount) {
+    if(iAmount == 0) return;
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 1000);
+
+    for(int icount = 0; icount < iAmount; icount++) {
+        addElementEnd(&lista, dis(gen));//adicionando um elemento aleatorio
+    }
 }
