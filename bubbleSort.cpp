@@ -25,31 +25,12 @@ void swapValue(Node*,Node*);
 void bubbleSort(Node*, int);
 void randomList(Node*&, int);
 void bubbleSortUnoptimized(Node*);
+Node* duplicateList(Node*);
+void medetempo(int);
 
 int main()
 {
-    Node* node1 = nullptr;
-    randomList(node1, 10000); //função que cria nós aleatorios
-    
-    auto timeStart = high_resolution_clock::now();
-    bubbleSortUnoptimized(node1);
-    auto timeStop = high_resolution_clock::now();//medindo tempo de execução
-    showNode(node1);
-
-    auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-    cout<< "tempo de compilação = " <<timeDuration.count()<<endl;
-
-    Node* node2 = nullptr;
-    randomList(node2, 10000); //função que cria nós aleatorios
-    
-    timeStart = high_resolution_clock::now();
-    bubbleSort(node2, 10000); // Executa o bubbleSort
-    timeStop = high_resolution_clock::now(); // medindo tempo de execução
-    showNode(node2);
-
-    timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-    cout << "tempo de compilação = " << timeDuration.count() << endl;
-
+    medetempo(100);
     return 0;
 }
 
@@ -171,4 +152,46 @@ void bubbleSortUnoptimized(Node* lista)
         }
         ptrtemp = ptrtemp->ptrNext;//atualiza pro proximo nó
     }
+}
+
+Node* duplicateList(Node* lista)
+{
+    //esta função recebe uma lista qualquer e retorna uma outra ista exatamente igual
+
+    Node* ptrTemp = lista;
+    Node* newList = nullptr;
+    while(ptrTemp != nullptr)
+    {
+        addElementEnd(&newList,ptrTemp->iNum);
+        ptrTemp = ptrTemp->ptrNext;
+    }
+    return newList;
+}
+
+void medetempo(int iSize)
+{
+    int iCount = 0;
+    while (iCount < iSize)
+    {
+        cout<<"teste "<<iCount<<endl;
+        Node* node1 = nullptr;
+        randomList(node1, 10000); //função que cria nós aleatorios
+        Node* node2 = duplicateList(node1);
+
+        auto timeStart = high_resolution_clock::now();
+        bubbleSortUnoptimized(node1);
+        auto timeStop = high_resolution_clock::now();//medindo tempo de execução
+
+        auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+        cout<< "tempo de compilação não otimizada   = " <<timeDuration.count()<<endl;
+        timeStart = high_resolution_clock::now();
+        bubbleSort(node2, 10000); // Executa o bubbleSort
+        timeStop = high_resolution_clock::now(); // medindo tempo de execução
+
+        timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+        cout << "tempo de compilação otimizada   = " << timeDuration.count() << endl;
+        cout<<endl;
+        iCount++;
+    }
+    
 }

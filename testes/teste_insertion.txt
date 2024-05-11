@@ -1,0 +1,400 @@
+teste 0
+tempo de compilação não otimizada   = 224950757
+tempo de compilação otimizada   = 87050080
+
+teste 1
+tempo de compilação não otimizada   = 235299716
+tempo de compilação otimizada   = 84308062
+
+teste 2
+tempo de compilação não otimizada   = 224676144
+tempo de compilação otimizada   = 84636049
+
+teste 3
+tempo de compilação não otimizada   = 224809668
+tempo de compilação otimizada   = 85603653
+
+teste 4
+tempo de compilação não otimizada   = 231316472
+tempo de compilação otimizada   = 82517549
+
+teste 5
+tempo de compilação não otimizada   = 226913638
+tempo de compilação otimizada   = 84241176
+
+teste 6
+tempo de compilação não otimizada   = 224800110
+tempo de compilação otimizada   = 82317329
+
+teste 7
+tempo de compilação não otimizada   = 253517174
+tempo de compilação otimizada   = 95655004
+
+teste 8
+tempo de compilação não otimizada   = 207606424
+tempo de compilação otimizada   = 79530036
+
+teste 9
+tempo de compilação não otimizada   = 230942309
+tempo de compilação otimizada   = 81577178
+
+teste 10
+tempo de compilação não otimizada   = 221255663
+tempo de compilação otimizada   = 80284766
+
+teste 11
+tempo de compilação não otimizada   = 225616385
+tempo de compilação otimizada   = 85290745
+
+teste 12
+tempo de compilação não otimizada   = 231535344
+tempo de compilação otimizada   = 90952836
+
+teste 13
+tempo de compilação não otimizada   = 251188998
+tempo de compilação otimizada   = 84254673
+
+teste 14
+tempo de compilação não otimizada   = 230288276
+tempo de compilação otimizada   = 82870964
+
+teste 15
+tempo de compilação não otimizada   = 238194628
+tempo de compilação otimizada   = 89849594
+
+teste 16
+tempo de compilação não otimizada   = 191016137
+tempo de compilação otimizada   = 67265441
+
+teste 17
+tempo de compilação não otimizada   = 173845682
+tempo de compilação otimizada   = 57465153
+
+teste 18
+tempo de compilação não otimizada   = 164722842
+tempo de compilação otimizada   = 57531536
+
+teste 19
+tempo de compilação não otimizada   = 159708307
+tempo de compilação otimizada   = 60887988
+
+teste 20
+tempo de compilação não otimizada   = 179918523
+tempo de compilação otimizada   = 58892129
+
+teste 21
+tempo de compilação não otimizada   = 162092542
+tempo de compilação otimizada   = 59535300
+
+teste 22
+tempo de compilação não otimizada   = 161720784
+tempo de compilação otimizada   = 61260127
+
+teste 23
+tempo de compilação não otimizada   = 159218568
+tempo de compilação otimizada   = 64635904
+
+teste 24
+tempo de compilação não otimizada   = 161875898
+tempo de compilação otimizada   = 58053636
+
+teste 25
+tempo de compilação não otimizada   = 159896394
+tempo de compilação otimizada   = 63860516
+
+teste 26
+tempo de compilação não otimizada   = 169603621
+tempo de compilação otimizada   = 60569592
+
+teste 27
+tempo de compilação não otimizada   = 166379706
+tempo de compilação otimizada   = 58390167
+
+teste 28
+tempo de compilação não otimizada   = 169115338
+tempo de compilação otimizada   = 61171849
+
+teste 29
+tempo de compilação não otimizada   = 162883731
+tempo de compilação otimizada   = 62530690
+
+teste 30
+tempo de compilação não otimizada   = 160271506
+tempo de compilação otimizada   = 65322195
+
+teste 31
+tempo de compilação não otimizada   = 160852948
+tempo de compilação otimizada   = 63233059
+
+teste 32
+tempo de compilação não otimizada   = 160323050
+tempo de compilação otimizada   = 59993766
+
+teste 33
+tempo de compilação não otimizada   = 166696685
+tempo de compilação otimizada   = 62946886
+
+teste 34
+tempo de compilação não otimizada   = 165294210
+tempo de compilação otimizada   = 68330529
+
+teste 35
+tempo de compilação não otimizada   = 162470257
+tempo de compilação otimizada   = 59127765
+
+teste 36
+tempo de compilação não otimizada   = 159624953
+tempo de compilação otimizada   = 60938147
+
+teste 37
+tempo de compilação não otimizada   = 156914987
+tempo de compilação otimizada   = 61397793
+
+teste 38
+tempo de compilação não otimizada   = 160776217
+tempo de compilação otimizada   = 58969926
+
+teste 39
+tempo de compilação não otimizada   = 159061377
+tempo de compilação otimizada   = 59110264
+
+teste 40
+tempo de compilação não otimizada   = 159534632
+tempo de compilação otimizada   = 65638969
+
+teste 41
+tempo de compilação não otimizada   = 155623284
+tempo de compilação otimizada   = 59755262
+
+teste 42
+tempo de compilação não otimizada   = 164359299
+tempo de compilação otimizada   = 57466531
+
+teste 43
+tempo de compilação não otimizada   = 164838822
+tempo de compilação otimizada   = 60053521
+
+teste 44
+tempo de compilação não otimizada   = 160106261
+tempo de compilação otimizada   = 63684143
+
+teste 45
+tempo de compilação não otimizada   = 163822066
+tempo de compilação otimizada   = 60993743
+
+teste 46
+tempo de compilação não otimizada   = 168710882
+tempo de compilação otimizada   = 63889944
+
+teste 47
+tempo de compilação não otimizada   = 185094065
+tempo de compilação otimizada   = 59379034
+
+teste 48
+tempo de compilação não otimizada   = 163184341
+tempo de compilação otimizada   = 64731288
+
+teste 49
+tempo de compilação não otimizada   = 161198886
+tempo de compilação otimizada   = 57443102
+
+teste 50
+tempo de compilação não otimizada   = 166890092
+tempo de compilação otimizada   = 62066657
+
+teste 51
+tempo de compilação não otimizada   = 158458059
+tempo de compilação otimizada   = 58505570
+
+teste 52
+tempo de compilação não otimizada   = 161406369
+tempo de compilação otimizada   = 58927594
+
+teste 53
+tempo de compilação não otimizada   = 158816502
+tempo de compilação otimizada   = 59438728
+
+teste 54
+tempo de compilação não otimizada   = 159173163
+tempo de compilação otimizada   = 57367870
+
+teste 55
+tempo de compilação não otimizada   = 159031044
+tempo de compilação otimizada   = 60578372
+
+teste 56
+tempo de compilação não otimizada   = 160060888
+tempo de compilação otimizada   = 60005118
+
+teste 57
+tempo de compilação não otimizada   = 157185153
+tempo de compilação otimizada   = 62314210
+
+teste 58
+tempo de compilação não otimizada   = 162413913
+tempo de compilação otimizada   = 59213621
+
+teste 59
+tempo de compilação não otimizada   = 169405181
+tempo de compilação otimizada   = 60901078
+
+teste 60
+tempo de compilação não otimizada   = 159236677
+tempo de compilação otimizada   = 60862072
+
+teste 61
+tempo de compilação não otimizada   = 164715961
+tempo de compilação otimizada   = 61042814
+
+teste 62
+tempo de compilação não otimizada   = 176375919
+tempo de compilação otimizada   = 59707641
+
+teste 63
+tempo de compilação não otimizada   = 158792739
+tempo de compilação otimizada   = 59157583
+
+teste 64
+tempo de compilação não otimizada   = 163652633
+tempo de compilação otimizada   = 58699040
+
+teste 65
+tempo de compilação não otimizada   = 157340089
+tempo de compilação otimizada   = 59974441
+
+teste 66
+tempo de compilação não otimizada   = 156765803
+tempo de compilação otimizada   = 58271743
+
+teste 67
+tempo de compilação não otimizada   = 163369105
+tempo de compilação otimizada   = 58633993
+
+teste 68
+tempo de compilação não otimizada   = 161322422
+tempo de compilação otimizada   = 56976215
+
+teste 69
+tempo de compilação não otimizada   = 169973562
+tempo de compilação otimizada   = 65388882
+
+teste 70
+tempo de compilação não otimizada   = 159670943
+tempo de compilação otimizada   = 58400682
+
+teste 71
+tempo de compilação não otimizada   = 160749930
+tempo de compilação otimizada   = 60355115
+
+teste 72
+tempo de compilação não otimizada   = 167526658
+tempo de compilação otimizada   = 62948169
+
+teste 73
+tempo de compilação não otimizada   = 167484769
+tempo de compilação otimizada   = 59673328
+
+teste 74
+tempo de compilação não otimizada   = 159436448
+tempo de compilação otimizada   = 60378170
+
+teste 75
+tempo de compilação não otimizada   = 171988934
+tempo de compilação otimizada   = 61803146
+
+teste 76
+tempo de compilação não otimizada   = 168898295
+tempo de compilação otimizada   = 60077325
+
+teste 77
+tempo de compilação não otimizada   = 168157109
+tempo de compilação otimizada   = 64230783
+
+teste 78
+tempo de compilação não otimizada   = 161530616
+tempo de compilação otimizada   = 64987216
+
+teste 79
+tempo de compilação não otimizada   = 156186419
+tempo de compilação otimizada   = 60752554
+
+teste 80
+tempo de compilação não otimizada   = 169315319
+tempo de compilação otimizada   = 60633705
+
+teste 81
+tempo de compilação não otimizada   = 164627201
+tempo de compilação otimizada   = 62070626
+
+teste 82
+tempo de compilação não otimizada   = 160463874
+tempo de compilação otimizada   = 61057807
+
+teste 83
+tempo de compilação não otimizada   = 161273097
+tempo de compilação otimizada   = 65157859
+
+teste 84
+tempo de compilação não otimizada   = 161957603
+tempo de compilação otimizada   = 56274145
+
+teste 85
+tempo de compilação não otimizada   = 160737808
+tempo de compilação otimizada   = 63141556
+
+teste 86
+tempo de compilação não otimizada   = 172918085
+tempo de compilação otimizada   = 59557435
+
+teste 87
+tempo de compilação não otimizada   = 155158161
+tempo de compilação otimizada   = 57966422
+
+teste 88
+tempo de compilação não otimizada   = 158634496
+tempo de compilação otimizada   = 61805911
+
+teste 89
+tempo de compilação não otimizada   = 156318081
+tempo de compilação otimizada   = 62839131
+
+teste 90
+tempo de compilação não otimizada   = 168167939
+tempo de compilação otimizada   = 62780170
+
+teste 91
+tempo de compilação não otimizada   = 166704140
+tempo de compilação otimizada   = 61996777
+
+teste 92
+tempo de compilação não otimizada   = 173817832
+tempo de compilação otimizada   = 69821050
+
+teste 93
+tempo de compilação não otimizada   = 161576954
+tempo de compilação otimizada   = 62075545
+
+teste 94
+tempo de compilação não otimizada   = 167387000
+tempo de compilação otimizada   = 63693979
+
+teste 95
+tempo de compilação não otimizada   = 183084966
+tempo de compilação otimizada   = 69641204
+
+teste 96
+tempo de compilação não otimizada   = 151960915
+tempo de compilação otimizada   = 67194833
+
+teste 97
+tempo de compilação não otimizada   = 161592625
+tempo de compilação otimizada   = 61735036
+
+teste 98
+tempo de compilação não otimizada   = 168831303
+tempo de compilação otimizada   = 59347265
+
+teste 99
+tempo de compilação não otimizada   = 163056883
+tempo de compilação otimizada   = 60836416
+

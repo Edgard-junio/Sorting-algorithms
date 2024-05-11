@@ -25,51 +25,12 @@ void randomList(Node*&, int);
 void swapValue(Node*,Node*);
 void selectionSort(Node*);
 void optimizedSelectionSort(Node*);
+Node* duplicateList(Node*);
+void medetempo(int);
 
 int main()
 {
-    Node* list1 = nullptr;
-    int numElements1 = 10000;  // Número de elementos a serem gerados aleatoriamente
-
-    randomList(list1, numElements1);  // Gerando a lista com elementos aleatórios
-
-    cout << "Lista original gerada aleatoriamente: ";
-    displayList(list1);
-    
-    // Isso somente pode ser feito quando o tipo for declarado de forma indireta;
-    //time_point<std::chrono::high_resolution_clock>
-    auto timeStart = high_resolution_clock::now();
-    optimizedSelectionSort(list1);
-    auto timeStop = high_resolution_clock::now();
-    
-    cout << "Lista ordenada: ";
-    displayList(list1);
-    
-    auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-    cout << "Tempo utilizado: " << timeDuration.count() << " nanosegundos." << endl;
-    cout << "=========================================" << endl;
-    
-    Node* list2 = nullptr;
-    int numElements2 = 10000;  // Número de elementos a serem gerados aleatoriamente
-
-    randomList(list2, numElements2);  // Gerando a lista com elementos aleatórios
-
-    cout << "Lista original gerada aleatoriamente: ";
-    displayList(list2);
-    
-    // Isso somente pode ser feito quando o tipo for declarado de forma indireta;
-    //time_point<std::chrono::high_resolution_clock>
-    timeStart = high_resolution_clock::now();
-    selectionSort(list2);
-    timeStop = high_resolution_clock::now();
-    
-    cout << "Lista ordenada: ";
-    displayList(list2);
-    
-    timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-    cout << "Tempo utilizado: " << timeDuration.count() << " nanosegundos." << endl;
-    cout << "=========================================" << endl;
-    
+    medetempo(100);      
     return 0;
 }
 
@@ -208,4 +169,47 @@ void optimizedSelectionSort(Node* head)
 
         current = current -> ptrNext;
     }
+}
+
+
+Node* duplicateList(Node* lista)
+{
+    //esta função recebe uma lista qualquer e retorna uma outra ista exatamente igual
+
+    Node* ptrTemp = lista;
+    Node* newList = nullptr;
+    while(ptrTemp != nullptr)
+    {
+        addElement(&newList,ptrTemp->iPayload);
+        ptrTemp = ptrTemp->ptrNext;
+    }
+    return newList;
+}
+
+void medetempo(int iSize)
+{
+    int iCount = 0;
+    while (iCount < iSize)
+    {
+        cout<<"teste "<<iCount<<endl;
+        Node* node1 = nullptr;
+        randomList(node1, 10000); //função que cria nós aleatorios
+        Node* node2 = duplicateList(node1);
+
+        auto timeStart = high_resolution_clock::now();
+        selectionSort(node1);// Executa o selection nao otimizado
+        auto timeStop = high_resolution_clock::now();//medindo tempo de execução
+
+        auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+        cout<< "tempo de compilação não otimizada   = " <<timeDuration.count()<<endl;
+        timeStart = high_resolution_clock::now();
+        optimizedSelectionSort(node2); // Executa o selection otimizado
+        timeStop = high_resolution_clock::now(); // medindo tempo de execução
+
+        timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+        cout << "tempo de compilação otimizada   = " << timeDuration.count() << endl;
+        cout<<endl;
+        iCount++;
+    }
+    
 }
