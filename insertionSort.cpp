@@ -127,23 +127,21 @@ void randomList(Node* &lista, int iAmount) {
     }
 }
 
-void insertionSort(Node* head)
+void insertionSort(Node* lista)
 {
-    Node* ptrTemp = head;//ponteiro pro inicio da lista
-    while (ptrTemp->ptrNext != nullptr)
+    Node* ptrTemp = lista; // Ponteiro para o início da lista
+    while (ptrTemp != nullptr) // Enquanto não chegarmos ao final da lista
     {
-        Node* current = ptrTemp;//criando os parametros de comparação
-        Node* ptrAux = ptrTemp->ptrNext;
-        while (current->ptrPrev != head)
+        Node* current = ptrTemp; // Criando um ponteiro para o elemento atual
+        while (current->ptrPrev != nullptr) // Percorrendo a lista de trás para frente
         {
-            if(current->iNum > ptrAux->iNum)
+            if(current->ptrPrev->iNum > current->iNum) // Se o elemento anterior for maior que o atual
             {
-                swapValue(current, ptrAux); //fazendo a troca quando um elemento de maior valor vem 
-                // antes de um de menor valor
+                swapValue(current->ptrPrev, current); // Troca os valores dos elementos
             }
-            current = current->ptrPrev;//Nesse algoritimo, valtamos o current até o começo
+            current = current->ptrPrev; // Movendo para o próximo elemento anterior
         }
-        ptrTemp = ptrTemp->ptrNext;//atualizando ptrTemp
+        ptrTemp = ptrTemp->ptrNext; // Movendo para o próximo elemento na lista
     }
 }
 
