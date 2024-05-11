@@ -22,9 +22,8 @@ Node* newNode(int);
 void addElementEnd(Node**,int);
 void showNode(Node*);
 void swapValue(Node*,Node*);
-void bubbleSort(Node*, int);
 void randomList(Node*&, int);
-void bubbleSortUnoptimized(Node*);
+void insertSort(Node*);
 
 int main()
 {
@@ -32,7 +31,7 @@ int main()
     randomList(node,10); //função que cria nós aleatorios
     
     auto timeStart = high_resolution_clock::now();
-    bubbleSortUnoptimized(node);
+    insertSort(node);
     auto timeStop = high_resolution_clock::now();//medindo tempo de execução
     showNode(node);
 
@@ -103,32 +102,6 @@ void swapValue(Node* iValue_1, Node* iValue_2)
     
 }
 
-void bubbleSort(Node* lista,int iSize)
-{
-    bool bUnordered = false; // Como boa prática iniciaremos a variável já dizendo que ela é falsa
-    
-    if(lista == nullptr) return; // Se o primeiro elemento é nulo a função para
-    
-    bUnordered = false; // Dizemos que nosso vetor esta ordenado
-    Node* ptrtemp = lista;
-    int icount  = 0;//inicia um contador para diminuir a quantidade de interações
-    while (ptrtemp->ptrNext != nullptr && icount < iSize)
-    {
-        if(ptrtemp->iNum > ptrtemp->ptrNext->iNum)
-        {
-            swapValue(ptrtemp,ptrtemp->ptrNext);//trocando os valores
-            bUnordered = true; //Nossa lista não esta ordenada
-        }
-        ptrtemp = ptrtemp->ptrNext;
-    }
-    
-    if(bUnordered == true)
-    {
-        bubbleSort(lista,iSize-1); /*como o vetor não esta ordenado repetiremos o método para o vetor sem o ultimo elemento, 
-        ele já esta na sua posição*/
-    }
-}
-
 void randomList(Node* &lista, int iAmount) {
     if(iAmount == 0) return;
 
@@ -140,23 +113,24 @@ void randomList(Node* &lista, int iAmount) {
         addElementEnd(&lista, dis(gen));//adicionando um elemento aleatorio
     }
 }
-void bubbleSortUnoptimized(Node* lista)
-{
-    //Bubblesort não otimizado
-    Node* ptrtemp = lista;
-    while (ptrtemp != nullptr)
-    {
-        Node* minNode = ptrtemp;
-        Node* current = ptrtemp->ptrNext;
 
-        while (current != nullptr)
+void insertSort(Node* lista)
+{
+    Node* ptrTemp = lista;//ponteiro pro inicio da lista
+    while (ptrTemp->ptrNext != nullptr)
+    {
+        Node* current = ptrTemp;//criando os parametros de comparação
+        Node* ptrAux = ptrTemp->ptrNext;
+        while (current->ptrPrev != lista)
         {
-            if(minNode->iNum > current->iNum)
+            if(current->iNum > ptrAux->iNum)
             {
-                swapValue(minNode,current);//trocando os valores
+                swapValue(current, ptrAux); //fazendo a troca quando um elemento de maior valor vem 
+                // antes de um de maior valor
             }
-            current = current->ptrNext;//atualiza pro proximo nó
+            current = current->ptrPrev;//Nesse algoritimo valtamos o current ate o começo
         }
-        ptrtemp = ptrtemp->ptrNext;//atualiza pro proximo nó
+        ptrTemp = ptrTemp->ptrNext;//atualizando ptrTemp
     }
+    
 }
