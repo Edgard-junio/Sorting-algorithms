@@ -23,20 +23,33 @@ void addElementEnd(Node**,int);
 void showNode(Node*);
 void swapValue(Node*,Node*);
 void randomList(Node*&, int);
-void insertSort(Node*);
+void insertionSort(Node*);
+void optimizedInsertionSort(Node*);
 
 int main()
 {
-    Node* node = nullptr;
-    randomList(node,10); //função que cria nós aleatorios
+    Node* node1 = nullptr;
+    randomList(node1, 10000); //função que cria nós aleatorios
     
     auto timeStart = high_resolution_clock::now();
-    insertSort(node);
+    optimizedInsertionSort(node1);
     auto timeStop = high_resolution_clock::now();//medindo tempo de execução
-    showNode(node);
+    showNode(node1);
 
     auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
     cout<<"tempo de compilaçao = "<<timeDuration.count()<<endl;
+    
+    Node* node2 = nullptr;
+    randomList(node2, 10000); //função que cria nós aleatorios
+    
+    timeStart = high_resolution_clock::now();
+    insertionSort(node2);
+    timeStop = high_resolution_clock::now();//medindo tempo de execução
+    showNode(node2);
+
+    timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+    cout<<"tempo de compilaçao = "<<timeDuration.count()<<endl;
+    
     return 0;
 }
 
@@ -114,23 +127,50 @@ void randomList(Node* &lista, int iAmount) {
     }
 }
 
-void insertSort(Node* lista)
+void insertionSort(Node* head)
 {
-    Node* ptrTemp = lista;//ponteiro pro inicio da lista
+    Node* ptrTemp = head;//ponteiro pro inicio da lista
     while (ptrTemp->ptrNext != nullptr)
     {
         Node* current = ptrTemp;//criando os parametros de comparação
         Node* ptrAux = ptrTemp->ptrNext;
-        while (current->ptrPrev != lista)
+        while (current->ptrPrev != head)
         {
             if(current->iNum > ptrAux->iNum)
             {
                 swapValue(current, ptrAux); //fazendo a troca quando um elemento de maior valor vem 
-                // antes de um de maior valor
+                // antes de um de menor valor
             }
-            current = current->ptrPrev;//Nesse algoritimo valtamos o current ate o começo
+            current = current->ptrPrev;//Nesse algoritimo, valtamos o current até o começo
         }
         ptrTemp = ptrTemp->ptrNext;//atualizando ptrTemp
     }
-    
+}
+
+void optimizedInsertionSort(Node* head)
+{
+    // Verifica se a lista está vazia ou contém apenas um elemento
+    if (head == nullptr || head -> ptrNext == nullptr)
+        return; 
+
+    Node* ptrTemp = head -> ptrNext; // Começando a partir do segundo elemento
+    while (ptrTemp != nullptr)
+    {
+        int iValorInserir = ptrTemp -> iNum;
+        Node* current = ptrTemp -> ptrPrev; // Começando do nó anterior
+        while (current != nullptr && current -> iNum > iValorInserir)
+        {
+            current -> ptrNext -> iNum = current -> iNum; // Deslocando os elementos para realizar a inserção
+            current = current -> ptrPrev; // Movendo para o nó anterior
+        }
+        if (current == nullptr)
+        {
+            head -> iNum = iValorInserir; // Se atual for nullptr, precisamos inserir no início
+        }
+        else
+        {
+            current -> ptrNext-> iNum = iValorInserir; // Insere o valor na posição correta
+        }
+        ptrTemp = ptrTemp -> ptrNext; // Move para o próximo elemento
+    }
 }

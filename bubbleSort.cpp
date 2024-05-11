@@ -28,16 +28,28 @@ void bubbleSortUnoptimized(Node*);
 
 int main()
 {
-    Node* node = nullptr;
-    randomList(node,10); //função que cria nós aleatorios
+    Node* node1 = nullptr;
+    randomList(node1, 10000); //função que cria nós aleatorios
     
     auto timeStart = high_resolution_clock::now();
-    bubbleSortUnoptimized(node);
+    bubbleSortUnoptimized(node1);
     auto timeStop = high_resolution_clock::now();//medindo tempo de execução
-    showNode(node);
+    showNode(node1);
 
     auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-    cout<<"tempo de compilaçao = "<<timeDuration.count()<<endl;
+    cout<< "tempo de compilação = " <<timeDuration.count()<<endl;
+
+    Node* node2 = nullptr;
+    randomList(node2, 10000); //função que cria nós aleatorios
+    
+    timeStart = high_resolution_clock::now();
+    bubbleSort(node2, 10000); // Executa o bubbleSort
+    timeStop = high_resolution_clock::now(); // medindo tempo de execução
+    showNode(node2);
+
+    timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+    cout << "tempo de compilação = " << timeDuration.count() << endl;
+
     return 0;
 }
 

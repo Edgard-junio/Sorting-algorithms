@@ -24,27 +24,49 @@ void displayList(Node*);
 void randomList(Node*&, int);
 void swapValue(Node*,Node*);
 void selectionSort(Node*);
+void optimizedSelectionSort(Node*);
 
 int main()
 {
-    Node* list = nullptr;
-    int numElements = 10000;  // Número de elementos a serem gerados aleatoriamente
+    Node* list1 = nullptr;
+    int numElements1 = 10000;  // Número de elementos a serem gerados aleatoriamente
 
-    randomList(list, numElements);  // Gerando a lista com elementos aleatórios
+    randomList(list1, numElements1);  // Gerando a lista com elementos aleatórios
 
     cout << "Lista original gerada aleatoriamente: ";
-    displayList(list);
+    displayList(list1);
     
     // Isso somente pode ser feito quando o tipo for declarado de forma indireta;
     //time_point<std::chrono::high_resolution_clock>
     auto timeStart = high_resolution_clock::now();
-    selectionSort(list);
+    optimizedSelectionSort(list1);
     auto timeStop = high_resolution_clock::now();
     
     cout << "Lista ordenada: ";
-    displayList(list);
+    displayList(list1);
     
     auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+    cout << "Tempo utilizado: " << timeDuration.count() << " nanosegundos." << endl;
+    cout << "=========================================" << endl;
+    
+    Node* list2 = nullptr;
+    int numElements2 = 10000;  // Número de elementos a serem gerados aleatoriamente
+
+    randomList(list2, numElements2);  // Gerando a lista com elementos aleatórios
+
+    cout << "Lista original gerada aleatoriamente: ";
+    displayList(list2);
+    
+    // Isso somente pode ser feito quando o tipo for declarado de forma indireta;
+    //time_point<std::chrono::high_resolution_clock>
+    timeStart = high_resolution_clock::now();
+    selectionSort(list2);
+    timeStop = high_resolution_clock::now();
+    
+    cout << "Lista ordenada: ";
+    displayList(list2);
+    
+    timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
     cout << "Tempo utilizado: " << timeDuration.count() << " nanosegundos." << endl;
     cout << "=========================================" << endl;
     
@@ -99,8 +121,6 @@ void displayList(Node* node)
     
     Node* temp = node;
     
-    cout << "Payload ";
-    
     // Percorremos a lista até seu fim (ptrNext do último nó é NULL)
     while (temp != nullptr)
     {
@@ -132,6 +152,34 @@ void swapNodes(Node* node1, Node* node2) {
 }
 
 void selectionSort(Node* head)
+{
+    
+    Node* outerLoop = nullptr;
+    Node *innerLoop = nullptr;
+    Node* minNode = nullptr;
+    
+    // Realizando loop externo
+    for (outerLoop = head; outerLoop -> ptrNext != nullptr; outerLoop = outerLoop -> ptrNext)
+    {
+        minNode = outerLoop;
+        
+        // Encontrando o menor elemento no loop interno
+        for (innerLoop = outerLoop -> ptrNext; innerLoop != nullptr; innerLoop = innerLoop -> ptrNext)
+        {
+            if (innerLoop -> iPayload < minNode -> iPayload)
+            {
+                minNode = innerLoop;
+            }
+        }
+        
+        // Trocando os valores
+        int temp = outerLoop -> iPayload;
+        outerLoop -> iPayload = minNode -> iPayload;
+        minNode -> iPayload = temp;
+    }
+}
+
+void optimizedSelectionSort(Node* head)
 {
     if (head == nullptr) return;
 
