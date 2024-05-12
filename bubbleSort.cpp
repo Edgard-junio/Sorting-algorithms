@@ -100,20 +100,26 @@ void bubbleSort(Node* lista,int iSize)
 {
     bool bUnordered = false; // Como boa prática iniciaremos a variável já dizendo que ela é falsa
     
-    if(lista == nullptr) return; // Se o primeiro elemento é nulo a função para
-    
-    bUnordered = false; // Dizemos que nosso vetor esta ordenado
     Node* ptrtemp = lista;
     int icount  = 0;//inicia um contador para diminuir a quantidade de interações
-    while (ptrtemp->ptrNext != nullptr && icount < iSize)
+    while (icount < iSize - 1)
     {
-        if(ptrtemp->iNum > ptrtemp->ptrNext->iNum)
+        bUnordered = false;
+
+        while (ptrtemp->ptrNext != nullptr && icount < iSize)
         {
-            swapValue(ptrtemp,ptrtemp->ptrNext);//trocando os valores
-            bUnordered = true; //Nossa lista não esta ordenada
+            if(ptrtemp->iNum > ptrtemp->ptrNext->iNum)
+            {
+                swapValue(ptrtemp,ptrtemp->ptrNext);//trocando os valores
+                bUnordered = true; //Nossa lista não esta ordenada
+            }
+            ptrtemp = ptrtemp->ptrNext;
         }
-        ptrtemp = ptrtemp->ptrNext;
+        if (bUnordered == false) break;
+        icount++;
     }
+    
+
     
     if(bUnordered == true)
     {
