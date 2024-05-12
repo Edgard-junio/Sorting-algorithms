@@ -134,9 +134,7 @@ void selectionSort(Node* head)
         }
         
         // Trocando os valores
-        int temp = outerLoop -> iPayload;
-        outerLoop -> iPayload = minNode -> iPayload;
-        minNode -> iPayload = temp;
+        swapNodes(outerLoop, minNode);
     }
 }
 
