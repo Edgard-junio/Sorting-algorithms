@@ -95,37 +95,28 @@ void swapValue(Node* iValue_1, Node* iValue_2)
     iValue_2->iNum = iTemp;
     
 }
-
 void bubbleSort(Node* lista,int iSize)
 {
-    bool bUnordered = false; // Como boa prática iniciaremos a variável já dizendo que ela é falsa
-    
-    Node* ptrtemp = lista;
-    int icount  = 0;//inicia um contador para diminuir a quantidade de interações
-    while (icount < iSize - 1)
+    bool bUnordered = false; // inicia uma variável bool para saber se a lista esta ordenada
+    int iLoop = 0; //inicia um contador
+    Node* ptrTemp = nullptr;
+    while(iLoop < iSize - 1)
     {
-        bUnordered = false;
-
-        while (ptrtemp->ptrNext != nullptr && icount < iSize)
+        Node* current = lista; //novo ponteiro apontando para o inicio da lista
+        while (current->ptrNext != ptrTemp)
         {
-            if(ptrtemp->iNum > ptrtemp->ptrNext->iNum)
+            if(current->iNum > current->ptrNext->iNum)
             {
-                swapValue(ptrtemp,ptrtemp->ptrNext);//trocando os valores
-                bUnordered = true; //Nossa lista não esta ordenada
-            }
-            ptrtemp = ptrtemp->ptrNext;
+                swapValue(current,current->ptrNext); //troca os valores caso não esteja ordenado
+                bUnordered = true;
+            }    
+            current = current->ptrNext; //atualiza o ponteiro
         }
-        if (bUnordered == false) break;
-        icount++;
-    }
-    
+        if(bUnordered == false) break; // se não acontecer uma troca ele para o loop
+        ptrTemp = current; // atualiza até onde o loop deve ir
+        iLoop++;
 
-    
-    if(bUnordered == true)
-    {
-        bubbleSort(lista,iSize-1); /*como o vetor não esta ordenado repetiremos o método para o vetor sem o ultimo elemento, 
-        ele já esta na sua posição*/
-    }
+    }    
 }
 
 void randomList(Node* &lista, int iAmount) {
@@ -139,24 +130,23 @@ void randomList(Node* &lista, int iAmount) {
         addElementEnd(&lista, dis(gen));//adicionando um elemento aleatorio
     }
 }
-void bubbleSortUnoptimized(Node* lista)
+void bubbleSortUnoptimized(Node* lista, int iSize)
 {
     //Bubblesort não otimizado
-    Node* ptrtemp = lista;
-    while (ptrtemp != nullptr)
+    Node* ptrTemp = lista;
+    int iCount = 0;
+    while (iCount < iSize - 1)
     {
-        Node* minNode = ptrtemp;
-        Node* current = ptrtemp->ptrNext;
-
-        while (current != nullptr)
+        ptrTemp = lista; // ponteiro aponta pro inicio da lista
+        while (ptrTemp->ptrNext != nullptr)
         {
-            if(minNode->iNum > current->iNum)
+            if(ptrTemp->iNum > ptrTemp->ptrNext->iNum)
             {
-                swapValue(minNode,current);//trocando os valores
+                swapValue(ptrTemp,ptrTemp->ptrNext); //se necessario efetua a troca
             }
-            current = current->ptrNext;//atualiza pro proximo nó
+            ptrTemp = ptrTemp->ptrNext;
         }
-        ptrtemp = ptrtemp->ptrNext;//atualiza pro proximo nó
+        iCount++;
     }
 }
 
@@ -185,13 +175,15 @@ void medetempo(int iSize)
         Node* node2 = duplicateList(node1);
 
         auto timeStart = high_resolution_clock::now();
-        bubbleSortUnoptimized(node1);
+        bubbleSortUnoptimized(node1,10000);
         auto timeStop = high_resolution_clock::now();//medindo tempo de execução
 
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
         cout<< "tempo de compilação não otimizada   = " <<timeDuration.count()<<endl;
+
         timeStart = high_resolution_clock::now();
         bubbleSort(node2, 10000); // Executa o bubbleSort
+        
         timeStop = high_resolution_clock::now(); // medindo tempo de execução
 
         timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
