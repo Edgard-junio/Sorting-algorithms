@@ -1,400 +1,400 @@
 teste 0
-tempo de compilação não otimizada   = 109759847
-tempo de compilação otimizada   = 98881439
+tempo de compilação não otimizada   = 119041840
+tempo de compilação otimizada   = 102295640
 
 teste 1
-tempo de compilação não otimizada   = 100386249
-tempo de compilação otimizada   = 98083598
+tempo de compilação não otimizada   = 102132632
+tempo de compilação otimizada   = 115211474
 
 teste 2
-tempo de compilação não otimizada   = 96040537
-tempo de compilação otimizada   = 94587374
+tempo de compilação não otimizada   = 127364597
+tempo de compilação otimizada   = 108661944
 
 teste 3
-tempo de compilação não otimizada   = 101110834
-tempo de compilação otimizada   = 100913718
+tempo de compilação não otimizada   = 102905072
+tempo de compilação otimizada   = 103513393
 
 teste 4
-tempo de compilação não otimizada   = 98559709
-tempo de compilação otimizada   = 95551206
+tempo de compilação não otimizada   = 101755431
+tempo de compilação otimizada   = 100483816
 
 teste 5
-tempo de compilação não otimizada   = 133421586
-tempo de compilação otimizada   = 95143547
+tempo de compilação não otimizada   = 109567484
+tempo de compilação otimizada   = 100520396
 
 teste 6
-tempo de compilação não otimizada   = 96927428
-tempo de compilação otimizada   = 96560339
+tempo de compilação não otimizada   = 100423211
+tempo de compilação otimizada   = 99537353
 
 teste 7
-tempo de compilação não otimizada   = 97149371
-tempo de compilação otimizada   = 97980306
+tempo de compilação não otimizada   = 103426234
+tempo de compilação otimizada   = 102210457
 
 teste 8
-tempo de compilação não otimizada   = 98378853
-tempo de compilação otimizada   = 98930536
+tempo de compilação não otimizada   = 96774646
+tempo de compilação otimizada   = 101187467
 
 teste 9
-tempo de compilação não otimizada   = 93189855
-tempo de compilação otimizada   = 101523570
+tempo de compilação não otimizada   = 99946243
+tempo de compilação otimizada   = 109201534
 
 teste 10
-tempo de compilação não otimizada   = 97608037
-tempo de compilação otimizada   = 100395320
+tempo de compilação não otimizada   = 104223626
+tempo de compilação otimizada   = 103911350
 
 teste 11
-tempo de compilação não otimizada   = 145716523
-tempo de compilação otimizada   = 133064982
+tempo de compilação não otimizada   = 109945703
+tempo de compilação otimizada   = 96142309
 
 teste 12
-tempo de compilação não otimizada   = 104498731
-tempo de compilação otimizada   = 100303757
+tempo de compilação não otimizada   = 101380246
+tempo de compilação otimizada   = 120220909
 
 teste 13
-tempo de compilação não otimizada   = 125625524
-tempo de compilação otimizada   = 98232844
+tempo de compilação não otimizada   = 116474329
+tempo de compilação otimizada   = 102824618
 
 teste 14
-tempo de compilação não otimizada   = 106651485
-tempo de compilação otimizada   = 102189852
+tempo de compilação não otimizada   = 102074039
+tempo de compilação otimizada   = 113218551
 
 teste 15
-tempo de compilação não otimizada   = 96608521
-tempo de compilação otimizada   = 99609163
+tempo de compilação não otimizada   = 99221380
+tempo de compilação otimizada   = 103040129
 
 teste 16
-tempo de compilação não otimizada   = 97833136
-tempo de compilação otimizada   = 98621929
+tempo de compilação não otimizada   = 110358831
+tempo de compilação otimizada   = 103306645
 
 teste 17
-tempo de compilação não otimizada   = 106721661
-tempo de compilação otimizada   = 99117333
+tempo de compilação não otimizada   = 94934367
+tempo de compilação otimizada   = 98138685
 
 teste 18
-tempo de compilação não otimizada   = 100535142
-tempo de compilação otimizada   = 99602437
+tempo de compilação não otimizada   = 119506217
+tempo de compilação otimizada   = 83065192
 
 teste 19
-tempo de compilação não otimizada   = 106653601
-tempo de compilação otimizada   = 97132990
+tempo de compilação não otimizada   = 103434692
+tempo de compilação otimizada   = 66359808
 
 teste 20
-tempo de compilação não otimizada   = 100529561
-tempo de compilação otimizada   = 91371717
+tempo de compilação não otimizada   = 69345761
+tempo de compilação otimizada   = 69031039
 
 teste 21
-tempo de compilação não otimizada   = 76412682
-tempo de compilação otimizada   = 74406198
+tempo de compilação não otimizada   = 68385830
+tempo de compilação otimizada   = 68978539
 
 teste 22
-tempo de compilação não otimizada   = 85507099
-tempo de compilação otimizada   = 70911336
+tempo de compilação não otimizada   = 75303296
+tempo de compilação otimizada   = 91715983
 
 teste 23
-tempo de compilação não otimizada   = 69040489
-tempo de compilação otimizada   = 70375765
+tempo de compilação não otimizada   = 69965312
+tempo de compilação otimizada   = 75218829
 
 teste 24
-tempo de compilação não otimizada   = 66450411
-tempo de compilação otimizada   = 67911026
+tempo de compilação não otimizada   = 104871499
+tempo de compilação otimizada   = 70464793
 
 teste 25
-tempo de compilação não otimizada   = 69095315
-tempo de compilação otimizada   = 70621172
+tempo de compilação não otimizada   = 74727747
+tempo de compilação otimizada   = 66397070
 
 teste 26
-tempo de compilação não otimizada   = 72795428
-tempo de compilação otimizada   = 76660096
+tempo de compilação não otimizada   = 67302003
+tempo de compilação otimizada   = 67852111
 
 teste 27
-tempo de compilação não otimizada   = 72940004
-tempo de compilação otimizada   = 68544654
+tempo de compilação não otimizada   = 67812866
+tempo de compilação otimizada   = 72029825
 
 teste 28
-tempo de compilação não otimizada   = 69597873
-tempo de compilação otimizada   = 75436975
+tempo de compilação não otimizada   = 105649634
+tempo de compilação otimizada   = 69662654
 
 teste 29
-tempo de compilação não otimizada   = 67119676
-tempo de compilação otimizada   = 69573425
+tempo de compilação não otimizada   = 82029621
+tempo de compilação otimizada   = 72900656
 
 teste 30
-tempo de compilação não otimizada   = 71861728
-tempo de compilação otimizada   = 66064656
+tempo de compilação não otimizada   = 70286572
+tempo de compilação otimizada   = 67856731
 
 teste 31
-tempo de compilação não otimizada   = 66539410
-tempo de compilação otimizada   = 70640289
+tempo de compilação não otimizada   = 69010068
+tempo de compilação otimizada   = 66103196
 
 teste 32
-tempo de compilação não otimizada   = 66099762
-tempo de compilação otimizada   = 76199128
+tempo de compilação não otimizada   = 71963259
+tempo de compilação otimizada   = 69703742
 
 teste 33
-tempo de compilação não otimizada   = 82500113
-tempo de compilação otimizada   = 77535268
+tempo de compilação não otimizada   = 70669491
+tempo de compilação otimizada   = 73213625
 
 teste 34
-tempo de compilação não otimizada   = 79048211
-tempo de compilação otimizada   = 66849593
+tempo de compilação não otimizada   = 72610293
+tempo de compilação otimizada   = 72536932
 
 teste 35
-tempo de compilação não otimizada   = 87992134
-tempo de compilação otimizada   = 69074729
+tempo de compilação não otimizada   = 76243286
+tempo de compilação otimizada   = 70039332
 
 teste 36
-tempo de compilação não otimizada   = 69397991
-tempo de compilação otimizada   = 69550211
+tempo de compilação não otimizada   = 68693405
+tempo de compilação otimizada   = 76336125
 
 teste 37
-tempo de compilação não otimizada   = 69088480
-tempo de compilação otimizada   = 70020829
+tempo de compilação não otimizada   = 86539987
+tempo de compilação otimizada   = 90101884
 
 teste 38
-tempo de compilação não otimizada   = 69123257
-tempo de compilação otimizada   = 71931471
+tempo de compilação não otimizada   = 71212538
+tempo de compilação otimizada   = 73453539
 
 teste 39
-tempo de compilação não otimizada   = 66558858
-tempo de compilação otimizada   = 67735551
+tempo de compilação não otimizada   = 72800566
+tempo de compilação otimizada   = 71216415
 
 teste 40
-tempo de compilação não otimizada   = 69626927
-tempo de compilação otimizada   = 67787190
+tempo de compilação não otimizada   = 67816624
+tempo de compilação otimizada   = 66768586
 
 teste 41
-tempo de compilação não otimizada   = 76156629
-tempo de compilação otimizada   = 71808017
+tempo de compilação não otimizada   = 68045169
+tempo de compilação otimizada   = 72608459
 
 teste 42
-tempo de compilação não otimizada   = 78732789
-tempo de compilação otimizada   = 69353616
+tempo de compilação não otimizada   = 68895731
+tempo de compilação otimizada   = 71673827
 
 teste 43
-tempo de compilação não otimizada   = 67688112
-tempo de compilação otimizada   = 71021376
+tempo de compilação não otimizada   = 71874940
+tempo de compilação otimizada   = 71041762
 
 teste 44
-tempo de compilação não otimizada   = 70211692
-tempo de compilação otimizada   = 72973408
+tempo de compilação não otimizada   = 71081656
+tempo de compilação otimizada   = 67593039
 
 teste 45
-tempo de compilação não otimizada   = 73040848
-tempo de compilação otimizada   = 69789197
+tempo de compilação não otimizada   = 73171035
+tempo de compilação otimizada   = 74644606
 
 teste 46
-tempo de compilação não otimizada   = 78670959
-tempo de compilação otimizada   = 75508559
+tempo de compilação não otimizada   = 69601441
+tempo de compilação otimizada   = 69703316
 
 teste 47
-tempo de compilação não otimizada   = 70313988
-tempo de compilação otimizada   = 76388499
+tempo de compilação não otimizada   = 90902889
+tempo de compilação otimizada   = 69017759
 
 teste 48
-tempo de compilação não otimizada   = 75479826
-tempo de compilação otimizada   = 72519523
+tempo de compilação não otimizada   = 69028170
+tempo de compilação otimizada   = 74381634
 
 teste 49
-tempo de compilação não otimizada   = 87538284
-tempo de compilação otimizada   = 66403023
+tempo de compilação não otimizada   = 71850629
+tempo de compilação otimizada   = 80325065
 
 teste 50
-tempo de compilação não otimizada   = 71074797
-tempo de compilação otimizada   = 75753346
+tempo de compilação não otimizada   = 74269412
+tempo de compilação otimizada   = 71667310
 
 teste 51
-tempo de compilação não otimizada   = 69673919
-tempo de compilação otimizada   = 79352179
+tempo de compilação não otimizada   = 73211783
+tempo de compilação otimizada   = 75856165
 
 teste 52
-tempo de compilação não otimizada   = 71337895
-tempo de compilação otimizada   = 79075077
+tempo de compilação não otimizada   = 73707290
+tempo de compilação otimizada   = 71107183
 
 teste 53
-tempo de compilação não otimizada   = 72308737
-tempo de compilação otimizada   = 70380170
+tempo de compilação não otimizada   = 84021981
+tempo de compilação otimizada   = 70963627
 
 teste 54
-tempo de compilação não otimizada   = 73334914
-tempo de compilação otimizada   = 71837259
+tempo de compilação não otimizada   = 72671664
+tempo de compilação otimizada   = 68775047
 
 teste 55
-tempo de compilação não otimizada   = 70671096
-tempo de compilação otimizada   = 75446180
+tempo de compilação não otimizada   = 85875755
+tempo de compilação otimizada   = 69058497
 
 teste 56
-tempo de compilação não otimizada   = 72958065
-tempo de compilação otimizada   = 67961178
+tempo de compilação não otimizada   = 77926382
+tempo de compilação otimizada   = 75182612
 
 teste 57
-tempo de compilação não otimizada   = 65815136
-tempo de compilação otimizada   = 69519157
+tempo de compilação não otimizada   = 77173605
+tempo de compilação otimizada   = 73351713
 
 teste 58
-tempo de compilação não otimizada   = 70355172
-tempo de compilação otimizada   = 73745146
+tempo de compilação não otimizada   = 69347015
+tempo de compilação otimizada   = 68885025
 
 teste 59
-tempo de compilação não otimizada   = 74695207
-tempo de compilação otimizada   = 70695601
+tempo de compilação não otimizada   = 74035023
+tempo de compilação otimizada   = 71093206
 
 teste 60
-tempo de compilação não otimizada   = 71102417
-tempo de compilação otimizada   = 70654824
+tempo de compilação não otimizada   = 71511713
+tempo de compilação otimizada   = 74235986
 
 teste 61
-tempo de compilação não otimizada   = 72755298
-tempo de compilação otimizada   = 73810550
+tempo de compilação não otimizada   = 70984046
+tempo de compilação otimizada   = 66199148
 
 teste 62
-tempo de compilação não otimizada   = 74974350
-tempo de compilação otimizada   = 71048944
+tempo de compilação não otimizada   = 76397696
+tempo de compilação otimizada   = 71265886
 
 teste 63
-tempo de compilação não otimizada   = 72762051
-tempo de compilação otimizada   = 70771317
+tempo de compilação não otimizada   = 76431632
+tempo de compilação otimizada   = 88550553
 
 teste 64
-tempo de compilação não otimizada   = 70577156
-tempo de compilação otimizada   = 77070285
+tempo de compilação não otimizada   = 72527861
+tempo de compilação otimizada   = 73908864
 
 teste 65
-tempo de compilação não otimizada   = 78366568
-tempo de compilação otimizada   = 74399428
+tempo de compilação não otimizada   = 86154637
+tempo de compilação otimizada   = 81556962
 
 teste 66
-tempo de compilação não otimizada   = 66734920
-tempo de compilação otimizada   = 71648135
+tempo de compilação não otimizada   = 78865402
+tempo de compilação otimizada   = 72231855
 
 teste 67
-tempo de compilação não otimizada   = 69671449
-tempo de compilação otimizada   = 69871029
+tempo de compilação não otimizada   = 88773980
+tempo de compilação otimizada   = 76468192
 
 teste 68
-tempo de compilação não otimizada   = 69906837
-tempo de compilação otimizada   = 70007661
+tempo de compilação não otimizada   = 69992208
+tempo de compilação otimizada   = 68517996
 
 teste 69
-tempo de compilação não otimizada   = 72245107
-tempo de compilação otimizada   = 74639952
+tempo de compilação não otimizada   = 72818884
+tempo de compilação otimizada   = 70453386
 
 teste 70
-tempo de compilação não otimizada   = 73124503
-tempo de compilação otimizada   = 74827450
+tempo de compilação não otimizada   = 66687158
+tempo de compilação otimizada   = 67787211
 
 teste 71
-tempo de compilação não otimizada   = 75319018
-tempo de compilação otimizada   = 110938200
+tempo de compilação não otimizada   = 71530439
+tempo de compilação otimizada   = 67007755
 
 teste 72
-tempo de compilação não otimizada   = 68293040
-tempo de compilação otimizada   = 68500315
+tempo de compilação não otimizada   = 70979088
+tempo de compilação otimizada   = 77005036
 
 teste 73
-tempo de compilação não otimizada   = 71542688
-tempo de compilação otimizada   = 70325574
+tempo de compilação não otimizada   = 73451647
+tempo de compilação otimizada   = 74518540
 
 teste 74
-tempo de compilação não otimizada   = 66865800
-tempo de compilação otimizada   = 67897237
+tempo de compilação não otimizada   = 70579312
+tempo de compilação otimizada   = 75278990
 
 teste 75
-tempo de compilação não otimizada   = 68143865
-tempo de compilação otimizada   = 68060447
+tempo de compilação não otimizada   = 71294434
+tempo de compilação otimizada   = 79918096
 
 teste 76
-tempo de compilação não otimizada   = 70594000
-tempo de compilação otimizada   = 69914722
+tempo de compilação não otimizada   = 71440853
+tempo de compilação otimizada   = 88000744
 
 teste 77
-tempo de compilação não otimizada   = 71286637
-tempo de compilação otimizada   = 71281980
+tempo de compilação não otimizada   = 113675258
+tempo de compilação otimizada   = 96641645
 
 teste 78
-tempo de compilação não otimizada   = 71436495
-tempo de compilação otimizada   = 75057900
+tempo de compilação não otimizada   = 69881771
+tempo de compilação otimizada   = 73136026
 
 teste 79
-tempo de compilação não otimizada   = 75301305
-tempo de compilação otimizada   = 71089643
+tempo de compilação não otimizada   = 69264445
+tempo de compilação otimizada   = 70671828
 
 teste 80
-tempo de compilação não otimizada   = 75592423
-tempo de compilação otimizada   = 75215396
+tempo de compilação não otimizada   = 79330513
+tempo de compilação otimizada   = 75810665
 
 teste 81
-tempo de compilação não otimizada   = 69939124
-tempo de compilação otimizada   = 66321698
+tempo de compilação não otimizada   = 71038280
+tempo de compilação otimizada   = 71282963
 
 teste 82
-tempo de compilação não otimizada   = 69899017
-tempo de compilação otimizada   = 70961694
+tempo de compilação não otimizada   = 86809591
+tempo de compilação otimizada   = 119381658
 
 teste 83
-tempo de compilação não otimizada   = 73533288
-tempo de compilação otimizada   = 67708031
+tempo de compilação não otimizada   = 69412935
+tempo de compilação otimizada   = 69589943
 
 teste 84
-tempo de compilação não otimizada   = 74140906
-tempo de compilação otimizada   = 72410878
+tempo de compilação não otimizada   = 125602694
+tempo de compilação otimizada   = 92360045
 
 teste 85
-tempo de compilação não otimizada   = 70772284
-tempo de compilação otimizada   = 68463762
+tempo de compilação não otimizada   = 66646742
+tempo de compilação otimizada   = 66812773
 
 teste 86
-tempo de compilação não otimizada   = 70355217
-tempo de compilação otimizada   = 74234866
+tempo de compilação não otimizada   = 68526078
+tempo de compilação otimizada   = 74202819
 
 teste 87
-tempo de compilação não otimizada   = 73250508
-tempo de compilação otimizada   = 68333983
+tempo de compilação não otimizada   = 68084646
+tempo de compilação otimizada   = 72254433
 
 teste 88
-tempo de compilação não otimizada   = 65950331
-tempo de compilação otimizada   = 71090330
+tempo de compilação não otimizada   = 68863200
+tempo de compilação otimizada   = 70788079
 
 teste 89
-tempo de compilação não otimizada   = 69178904
-tempo de compilação otimizada   = 66628793
+tempo de compilação não otimizada   = 71726306
+tempo de compilação otimizada   = 73127368
 
 teste 90
-tempo de compilação não otimizada   = 94845903
-tempo de compilação otimizada   = 70819422
+tempo de compilação não otimizada   = 75630751
+tempo de compilação otimizada   = 69946424
 
 teste 91
-tempo de compilação não otimizada   = 66962730
-tempo de compilação otimizada   = 72000585
+tempo de compilação não otimizada   = 71062151
+tempo de compilação otimizada   = 75209329
 
 teste 92
-tempo de compilação não otimizada   = 66337287
-tempo de compilação otimizada   = 68327592
+tempo de compilação não otimizada   = 74929825
+tempo de compilação otimizada   = 67881156
 
 teste 93
-tempo de compilação não otimizada   = 67080033
-tempo de compilação otimizada   = 71592718
+tempo de compilação não otimizada   = 71357874
+tempo de compilação otimizada   = 83971031
 
 teste 94
-tempo de compilação não otimizada   = 66160791
-tempo de compilação otimizada   = 66250450
+tempo de compilação não otimizada   = 72559584
+tempo de compilação otimizada   = 73234131
 
 teste 95
-tempo de compilação não otimizada   = 67417116
-tempo de compilação otimizada   = 72672275
+tempo de compilação não otimizada   = 71290174
+tempo de compilação otimizada   = 85147214
 
 teste 96
-tempo de compilação não otimizada   = 67249085
-tempo de compilação otimizada   = 71709460
+tempo de compilação não otimizada   = 77013708
+tempo de compilação otimizada   = 74427590
 
 teste 97
-tempo de compilação não otimizada   = 69492983
-tempo de compilação otimizada   = 72898316
+tempo de compilação não otimizada   = 67425359
+tempo de compilação otimizada   = 73359089
 
 teste 98
-tempo de compilação não otimizada   = 68835799
-tempo de compilação otimizada   = 68289548
+tempo de compilação não otimizada   = 67778091
+tempo de compilação otimizada   = 72179933
 
 teste 99
-tempo de compilação não otimizada   = 67258173
-tempo de compilação otimizada   = 73212686
+tempo de compilação não otimizada   = 75418365
+tempo de compilação otimizada   = 70512173
 
