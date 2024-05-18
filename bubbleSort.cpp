@@ -37,7 +37,8 @@ void LinkedList::addElementEnd(Node** list, int iValor)
     if (*list == nullptr)
     {
         *list = ptrTemp; // Como a lista é vazia nosso novo nó será o primeiro
-    } else
+    }
+    else
     {
         Node* ptrCurrent = *list;
         while (ptrCurrent->ptrNext != nullptr)
@@ -54,10 +55,12 @@ void LinkedList::showNode(Node* list)
     if (list == nullptr)
     {
         std::cout << "Lista inválida" << std::endl;
-    } else if (list->ptrPrev != nullptr)
+    }
+    else if (list->ptrPrev != nullptr)
     {
         std::cout << "Estamos no meio da lista" << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "Elementos: ";
         Node* ptrCurrent = list; // Cria um ponteiro auxiliar
