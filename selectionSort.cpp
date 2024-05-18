@@ -193,13 +193,13 @@ namespace LinkedList {
             auto timeStop = high_resolution_clock::now();//medindo tempo de execução
 
             auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-            cout<< "Tempo de compilação não otimizada   = " <<timeDuration.count()<<endl;
+            cout<< "Tempo de compilação não otimizada = " <<timeDuration.count()<<endl;
             timeStart = high_resolution_clock::now();
             optimizedSelectionSort(node2); // Executa o selection otimizado
             timeStop = high_resolution_clock::now(); // medindo tempo de execução
 
             timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-            cout << "Tempo de compilação otimizada   = " << timeDuration.count() << endl;
+            cout << "Tempo de compilação otimizada = " << timeDuration.count() << endl;
             cout<<endl;
             iCount++;
         }
