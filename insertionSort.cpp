@@ -2,113 +2,101 @@
 #include <chrono>
 #include <random>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-
-using std::chrono::high_resolution_clock;
-using std::chrono::duration_cast;
-using std::chrono::nanoseconds;
-
-typedef struct Node{
-    
-    int iNum;
-    Node* ptrNext;
-    Node* ptrPrev;
-}Node;
-
-Node* newNode(int);
-void addElementEnd(Node**,int);
-void showNode(Node*);
-void swapValue(Node*,Node*);
-void randomList(Node*&, int);
-void insertionSort(Node*);
-void optimizedInsertionSort(Node*);
-Node* duplicateList(Node*);
-void medetempo(int);
-
-int main()
+namespace LinkedList
 {
-    medetempo(100);
-    return 0;
+    struct Node
+    {
+        int iNum;
+        Node* ptrNext;
+        Node* ptrPrev;
+    };
+
+    Node* newNode(int);
+    void addElementEnd(Node**, int);
+    void showNode(Node*);
+    void swapValue(Node*, Node*);
+    void randomList(Node*&, int);
+    void insertionSort(Node*);
+    void optimizedInsertionSort(Node*);
+    Node* duplicateList(Node*);
+    void medetempo(int);
 }
 
-Node* newNode(int iValor)
+LinkedList::Node* LinkedList::newNode(int iValor)
 {
-    Node* ptrTemp = (Node*)malloc(sizeof(Node)); //Alocando memória
-    ptrTemp->iNum = iValor; //Atualizando os parametros do Node
+    Node* ptrTemp = new Node; // Alocando memória
+    ptrTemp->iNum = iValor; // Atualizando os parâmetros do Node
     ptrTemp->ptrNext = nullptr;
-    ptrTemp->ptrNext = nullptr;
+    ptrTemp->ptrPrev = nullptr;
     return ptrTemp;
 }
 
-void addElementEnd(Node** list, int iValor)
+void LinkedList::addElementEnd(Node** list, int iValor)
 {
-    Node* ptrTemp = newNode(iValor); //cria um novo elemento
-    if(*list == nullptr)
+    Node* ptrTemp = newNode(iValor); // Cria um novo elemento
+    if (*list == nullptr)
     {
-        *list = ptrTemp;//Como a lista é vazia nosso novo nó será o primeiro
+        *list = ptrTemp; // Como a lista é vazia nosso novo nó será o primeiro
     }
     else
     {
-        Node* ptrCurrent = *list; 
+        Node* ptrCurrent = *list;
         while (ptrCurrent->ptrNext != nullptr)
         {
-            ptrCurrent = ptrCurrent->ptrNext;//Levando o ponteiro pro final da lista
+            ptrCurrent = ptrCurrent->ptrNext; // Levando o ponteiro pro final da lista
         }
         ptrCurrent->ptrNext = ptrTemp;
-        ptrTemp->ptrPrev = ptrCurrent;//Atualizando os parâmetros
+        ptrTemp->ptrPrev = ptrCurrent; // Atualizando os parâmetros
     }
 }
 
-void showNode(Node* list)
+void LinkedList::showNode(Node* list)
 {
-    if(list == nullptr)
+    if (list == nullptr)
     {
-        cout<<"Lista inválida"<<endl;
+        std::cout << "Lista inválida" << std::endl;
     }
-    else if(list->ptrPrev != nullptr)
+    else if (list->ptrPrev != nullptr)
     {
-        cout<<"Estamos no meio da lista"<<endl;
-    }
+        std::cout << "Estamos no meio da lista" << std::endl;
+    } 
     else
     {
-        cout<<"Elementos: ";
-        Node* ptrCurrent = list; //cria um ponteiro auxiliar
+        std::cout << "Elementos: ";
+        Node* ptrCurrent = list; // Cria um ponteiro auxiliar
         while (ptrCurrent != nullptr)
         {
-            cout<<ptrCurrent->iNum<<" ";
-            ptrCurrent = ptrCurrent->ptrNext;//Atualizando o nó
+            std::cout << ptrCurrent->iNum << " ";
+            ptrCurrent = ptrCurrent->ptrNext; // Atualizando o nó
         }
-        cout<<endl;
-        
+        std::cout << std::endl;
     }
 }
 
-void swapValue(Node* iValue_1, Node* iValue_2)
+void LinkedList::swapValue(Node* iValue_1, Node* iValue_2)
 {
     int iTemp = iValue_1->iNum;
-    
+
     iValue_1->iNum = iValue_2->iNum;
-    
+
     iValue_2->iNum = iTemp;
-    
 }
 
-void randomList(Node* &lista, int iAmount) {
-    if(iAmount == 0) return;
+void LinkedList::randomList(Node* &lista, int iAmount)
+{
+    if (iAmount == 0) return;
 
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, 1000);
 
-    for(int icount = 0; icount < iAmount; icount++) {
-        addElementEnd(&lista, dis(gen));//adicionando um elemento aleatorio
+    for (int icount = 0; icount < iAmount; icount++)
+    {
+        addElementEnd(&lista, dis(gen)); // Adicionando um elemento aleatório
     }
 }
 
-void insertionSort(Node* lista)
+void LinkedList::insertionSort(Node* lista)
 {
     Node* ptrTemp = lista; // Ponteiro para o início da lista
     while (ptrTemp != nullptr) // Enquanto não chegarmos ao final da lista
@@ -126,7 +114,7 @@ void insertionSort(Node* lista)
     }
 }
 
-void optimizedInsertionSort(Node* head)
+void LinkedList::optimizedInsertionSort(Node* head)
 {
     // Verifica se a lista está vazia ou contém apenas um elemento
     if (head == nullptr || head -> ptrNext == nullptr)
@@ -154,10 +142,9 @@ void optimizedInsertionSort(Node* head)
     }
 }
 
-
-Node* duplicateList(Node* lista)
+LinkedList::Node* LinkedList::duplicateList(Node* lista)
 {
-    //esta função recebe uma lista qualquer e retorna uma outra ista exatamente igual
+    // Esta função recebe uma lista qualquer e retorna uma outra lista exatamente igual
 
     Node* ptrTemp = lista;
     Node* newList = nullptr;
@@ -169,30 +156,36 @@ Node* duplicateList(Node* lista)
     return newList;
 }
 
-void medetempo(int iSize)
+void LinkedList::medetempo(int iSize)
 {
     int iCount = 0;
     while (iCount < iSize)
     {
-        cout<<"teste "<<iCount<<endl;
+        std::cout << "teste " << iCount << std::endl;
         Node* node1 = nullptr;
-        randomList(node1, 10000); //função que cria nós aleatorios
+        randomList(node1, 10000); // Função que cria nós aleatórios
         Node* node2 = duplicateList(node1);
 
-        auto timeStart = high_resolution_clock::now();
-        insertionSort(node1);// Executa o insertionsort nao otimizado
-        auto timeStop = high_resolution_clock::now();//medindo tempo de execução
+        auto timeStart = std::chrono::high_resolution_clock::now();
+        insertionSort(node1); // Executa o insertionsort nao otimizado
+        auto timeStop = std::chrono::high_resolution_clock::now(); // Medindo tempo de execução
 
-        auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-        cout<< "tempo de compilação não otimizada   = " <<timeDuration.count()<<endl;
-        timeStart = high_resolution_clock::now();
+        auto timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(timeStop - timeStart);
+        std::cout << "tempo de compilação não otimizada   = " << timeDuration.count() << std::endl;
+        
+        timeStart = std::chrono::high_resolution_clock::now();
         optimizedInsertionSort(node2); // Executa o insertionsort otimizado
-        timeStop = high_resolution_clock::now(); // medindo tempo de execução
+        timeStop = std::chrono::high_resolution_clock::now(); // Medindo tempo de execução
 
-        timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-        cout << "tempo de compilação otimizada   = " << timeDuration.count() << endl;
-        cout<<endl;
+        timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(timeStop - timeStart);
+        std::cout << "tempo de compilação otimizada   = " << timeDuration.count() << std::endl;
+        std::cout << std::endl;
         iCount++;
     }
-    
+}
+
+int main()
+{
+    LinkedList::medetempo(100);
+    return 0;
 }
