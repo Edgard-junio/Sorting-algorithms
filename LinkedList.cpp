@@ -69,7 +69,7 @@ void LinkedList::randomList(Node* &lista, int iAmount)
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 1000);
+    std::uniform_int_distribution<> dis(1, 100);
 
     for (int icount = 0; icount < iAmount; icount++)
     {
