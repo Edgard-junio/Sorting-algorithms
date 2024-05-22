@@ -15,4 +15,4 @@ O algoritmo de ordenação por inserção é um método simples e eficiente que 
 
 ## shellSort
 
-Shell Sort é um algoritmo de ordenação que é uma extensão do algoritmo de inserção. Ele divide a lista original em um número menor de sublistas específico, chamado de lacuna (gap), e ordena essas sublistas por meio do o algoritmo de inserção.
+Shell Sort é um algoritmo de ordenação que é uma extensão do algoritmo de inserção. Ele divide a lista original em um número menor de sublistas específico, chamado de lacuna (gap), e ordena essas sublistas por meio do algoritmo de inserção.
