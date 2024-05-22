@@ -3,6 +3,8 @@
 
 namespace ShellSort
 {
+    void aboutShellSort();
+
     template<typename T>
     void shellSort(Node<T>** head, int n);
 

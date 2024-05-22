@@ -10,6 +10,15 @@ using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 
+void ShellSort::aboutShellSort()
+{
+    cout << endl;
+
+    cout << "O algoritmo Shell Sort é uma extensão do método de ordenação por inserção. Ao invés de comparar elementos adjacentes, ele opera dividindo a lista original em sublistas menores, conhecidas como lacunas (ou gaps), e então ordenando essas sublistas usando o algoritmo de inserção." << endl;
+
+    cout << endl;
+}
+
 template<typename T>
 void ShellSort::shellSort(Node<T>** head, int n)
 {
