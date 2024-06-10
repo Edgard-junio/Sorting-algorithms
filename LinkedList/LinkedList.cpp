@@ -1,4 +1,5 @@
 #include "LinkedList.h"
+#include "../Tree/tree.h"
 #include <iostream>
 #include <chrono>
 #include <random>
@@ -117,3 +118,8 @@ template void LinkedList::showNode(Node<double>*);
 template void LinkedList::swapValue(Node<double>*, Node<double>*);
 template Node<double>* LinkedList::duplicateList(Node<double>*);
 
+
+// Instanciações explícitas para tipos treeNode<T>
+template void LinkedList::addElementEnd(Node<treeNode<int>*>**, treeNode<int>*);
+template void LinkedList::addElementEnd(Node<treeNode<double>*>**, treeNode<double>*);
+template void LinkedList::addElementEnd(Node<treeNode<float>*>**, treeNode<float>*);
