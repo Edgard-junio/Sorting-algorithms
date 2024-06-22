@@ -4,6 +4,7 @@
 #include <chrono>
 #include <random>
 
+// Cria um novo nó com o dado fornecido
 template<typename T>
 Node<T>* LinkedList::newNode(T data)
 {
@@ -14,26 +15,28 @@ Node<T>* LinkedList::newNode(T data)
     return temp;
 }
 
+// Adiciona um elemento no final da lista
 template<typename T>
 void LinkedList::addElementEnd(Node<T>** list, T data)
 {
     Node<T>* temp = LinkedList::newNode(data);
-    if (*list == nullptr)
+    if (*list == nullptr) // Lista vazia
     {
         *list = temp;
     }
     else
     {
         Node<T>* current = *list;
-        while (current->ptrNext != nullptr)
+        while (current->ptrNext != nullptr) // Percorre até o final da lista
         {
             current = current->ptrNext;
         }
-        current->ptrNext = temp;
+        current->ptrNext = temp; // Adiciona o novo nó ao final
         temp->ptrPrev = current;
     }
 }
 
+// Exibe os elementos da lista
 template<typename T>
 void LinkedList::showNode(Node<T>* list)
 {
@@ -49,15 +52,16 @@ void LinkedList::showNode(Node<T>* list)
     {
         std::cout << "Elementos: ";
         Node<T>* current = list;
-        while (current != nullptr)
+        while (current != nullptr) // Percorre a lista inteira
         {
-            std::cout << current->data << " ";
+            std::cout << current->data << " "; // Imprime todos os elementos
             current = current->ptrNext;
         }
         std::cout << std::endl;
     }
 }
 
+// Troca os valores de dois nós
 template<typename T>
 void LinkedList::swapValue(Node<T>* node1, Node<T>* node2)
 {
@@ -66,13 +70,14 @@ void LinkedList::swapValue(Node<T>* node1, Node<T>* node2)
     node2->data = temp;
 }
 
+// Gera uma lista com elementos aleatórios
 void LinkedList::randomList(Node<int>** list, int amount)
 {
     if (amount == 0) return;
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 100);
+    std::uniform_int_distribution<> dis(1, 100); // Distribuição uniforme de números inteiros no intervalo [1, 100]
 
     for (int count = 0; count < amount; count++)
     {
@@ -80,14 +85,15 @@ void LinkedList::randomList(Node<int>** list, int amount)
     }
 }
 
+// Duplica uma lista
 template<typename T>
 Node<T>* LinkedList::duplicateList(Node<T>* list)
 {
     Node<T>* temp = list;
     Node<T>* newList = nullptr;
-    while (temp != nullptr)
+    while (temp != nullptr) // Percorre a lista original
     {
-        LinkedList::addElementEnd(&newList, temp->data);
+        LinkedList::addElementEnd(&newList, temp->data); // Adiciona cada elemento à nova lista
         temp = temp->ptrNext;
     }
     return newList;
