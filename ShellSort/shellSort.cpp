@@ -10,6 +10,7 @@ using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 
+// Função para explicar o algoritmo Shell Sort
 void ShellSort::aboutShellSort()
 {
     cout << endl;
@@ -19,6 +20,7 @@ void ShellSort::aboutShellSort()
     cout << endl;
 }
 
+// Método do Shell Sort não otimizado
 template<typename T>
 void ShellSort::shellSort(Node<T>** head, int n)
 {
@@ -28,6 +30,7 @@ void ShellSort::shellSort(Node<T>** head, int n)
         return;
     }
 
+    // Loop para definir o tamanho do gap e executar o insertion sort para cada gap
     for (int gap = n / 2; gap > 0; gap /= 2)
     {
         for (int i = gap; i < n; i++)
@@ -44,6 +47,7 @@ void ShellSort::shellSort(Node<T>** head, int n)
 
             T temp = current->data;
             Node<T>* inner = current->ptrPrev;
+            // Aplica o insertion sort dentro do gap
             while (inner != nullptr && inner->data > temp)
             {
                 LinkedList::swapValue(inner->ptrNext, inner);
@@ -55,6 +59,7 @@ void ShellSort::shellSort(Node<T>** head, int n)
     }   
 }
 
+// Método do Shell Sort otimizado com sequência de gaps de Knuth
 template<typename T>
 void ShellSort::optimizedshellSort(Node<T>** head, int n)
 {
@@ -70,7 +75,7 @@ void ShellSort::optimizedshellSort(Node<T>** head, int n)
         //Knuth (1973) mostrou experimentalmente que esta sequencia é difícil de ser batida por mais de 20% em eficiência.
     }
     
-
+    // Executa o Shell Sort com a sequência de gaps de Knuth
     while (gap > 0) 
     {
         for (int i = gap; i < n; i++)
@@ -87,6 +92,7 @@ void ShellSort::optimizedshellSort(Node<T>** head, int n)
 
             T temp = current->data;
             Node<T>* inner = current->ptrPrev;
+            // Aplica o insertion sort dentro do gap
             while (inner != nullptr && inner->data > temp)
             {
                 LinkedList::swapValue(inner->ptrNext, inner);
@@ -99,6 +105,7 @@ void ShellSort::optimizedshellSort(Node<T>** head, int n)
     }    
 }
 
+// Função para medir o tempo dos dois métodos de Shell Sort
 template<typename T>
 void ShellSort::medetempoShellSort(T iSize)
 {
@@ -107,9 +114,10 @@ void ShellSort::medetempoShellSort(T iSize)
     {
         cout << "Teste " << iCount << endl;
         Node<T>* node1 = nullptr;
-        LinkedList::randomList(&node1, 10000);
-        Node<T>* node2 = LinkedList::duplicateList(node1);
+        LinkedList::randomList(&node1, 10000); // Gera uma lista aleatória
+        Node<T>* node2 = LinkedList::duplicateList(node1); // Duplica a lista
 
+        // Mede o tempo da versão não otimizada
         auto timeStart = high_resolution_clock::now();
         ShellSort::shellSort(&node1,10000);
         auto timeStop = high_resolution_clock::now();
@@ -117,6 +125,7 @@ void ShellSort::medetempoShellSort(T iSize)
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
         cout << "Tempo de compila��o n�o otimizada = " << timeDuration.count() << endl;
 
+        // Mede o tempo da versão otimizada
         timeStart = high_resolution_clock::now();
         ShellSort::optimizedshellSort(&node2,10000);
         timeStop = high_resolution_clock::now();
@@ -128,6 +137,7 @@ void ShellSort::medetempoShellSort(T iSize)
     }
 }
 
+// Instâncias explícitas para int, float, char e double
 template void ShellSort::shellSort(Node<int>**, int);
 template void ShellSort::shellSort(Node<float>**, int);
 template void ShellSort::shellSort(Node<char>**, int);
@@ -138,4 +148,5 @@ template void ShellSort::optimizedshellSort(Node<float>**, int);
 template void ShellSort::optimizedshellSort(Node<char>**, int);
 template void ShellSort::optimizedshellSort(Node<double>**, int);
 
+// Instância explícita para a função de medição do tempo com int
 template void ShellSort::medetempoShellSort(int);
