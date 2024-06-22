@@ -10,12 +10,14 @@ using std::chrono::high_resolution_clock;
 using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 
+// Função para criar um novo nó da árvore
 template<typename T>
 treeNode<T>* tree::createtreeNode(T iValue)
 {
     treeNode<T>* tmp = (treeNode<T>*) malloc(sizeof(treeNode<T>));
     
-    if (tmp == nullptr)
+    // Verifica se a alocação de memória foi bem-sucedida
+    if (tmp == nullptr) 
     {
         cerr << "Erro em createtreeNode: malloc" << endl;
         exit(1);
@@ -28,6 +30,7 @@ treeNode<T>* tree::createtreeNode(T iValue)
     return tmp;
 }
 
+// Função para inserir um novo nó na árvore
 template<typename T>
 treeNode<T>* tree::inserttreeNode(treeNode<T>* startingtreeNode, T iData)
 {
@@ -48,6 +51,7 @@ treeNode<T>* tree::inserttreeNode(treeNode<T>* startingtreeNode, T iData)
     return startingtreeNode;
 }
 
+// Função para encontrar o nó com menor valor na subárvore
 template<typename T>
 Node<T>* tree::lesserLeaf(Node<T>* ptrStartingNode)
 {
@@ -58,6 +62,7 @@ Node<T>* tree::lesserLeaf(Node<T>* ptrStartingNode)
     return ptrCurrent;
 }
 
+// Função para fazer a travessia DFS (Depth-First Search)
 template<typename T>
 void tree::dfsTraversal(treeNode<T>* startingtreeNode)
 {
@@ -69,6 +74,7 @@ void tree::dfsTraversal(treeNode<T>* startingtreeNode)
     dfsTraversal(startingtreeNode->ptrRight);
 }
 
+// Função para deletar um nó da árvore
 template <typename T>
 Node<T>* tree::deleteNode(Node<T>* ptrStartingNode, int iData)
 {
@@ -80,6 +86,7 @@ Node<T>* tree::deleteNode(Node<T>* ptrStartingNode, int iData)
     {
         Node<T>* ptrTemp = nullptr;
         
+        // Caso o nó não tenha filho à esquerda
         if (ptrStartingNode -> ptrLeft == nullptr)
         {
             ptrTemp = ptrStartingNode -> ptrRight;
@@ -87,6 +94,7 @@ Node<T>* tree::deleteNode(Node<T>* ptrStartingNode, int iData)
             
             return ptrTemp;
         }
+        // Caso o nó não tenha filho à direita
         else if (ptrStartingNode -> ptrRight == nullptr)
         {
             ptrTemp = ptrStartingNode -> ptrLeft;
@@ -95,6 +103,7 @@ Node<T>* tree::deleteNode(Node<T>* ptrStartingNode, int iData)
             return ptrTemp;
         }
         
+        // Caso o nó tenha ambos os filhos
         ptrTemp = lesserLeaf(ptrStartingNode -> ptrRight);
         
         ptrStartingNode -> iPayload = ptrTemp -> iPayload;
@@ -106,23 +115,27 @@ Node<T>* tree::deleteNode(Node<T>* ptrStartingNode, int iData)
     return ptrStartingNode;
 }
 
+// Função para fazer a travessia BFS (Breadth-First Search)
 template <typename T>
 void tree::bfsTraversal(treeNode<T>* startingNode)
 {
     if (startingNode == nullptr) return;
 
+    // Inicializa uma fila para armazenar os nós da árvore a serem visitados
     Node<treeNode<T>*>* queueFront = nullptr;
     Node<treeNode<T>*>* queueRear = nullptr;
 
     LinkedList::addElementEnd(&queueRear, startingNode);
     queueFront = queueRear;
 
+    // Processa cada nó na fila até que todos os nós tenham sido visitados
     while (queueFront != nullptr)
     {
         treeNode<T>* currentNode = queueFront->data;
 
-        std::cout << currentNode -> iPayload << " ";
+        std::cout << currentNode -> iPayload << " "; // Imprime o valor do nó atual
 
+        // Adiciona os filhos à esquerda do nó atual à fila (se existirem)
         if (currentNode->ptrLeft != nullptr)
         {
             LinkedList::addElementEnd(&queueRear, currentNode -> ptrLeft);
@@ -132,6 +145,7 @@ void tree::bfsTraversal(treeNode<T>* startingNode)
             }
         }
 
+        // Adiciona os filhos à direita do nó atual à fila (se existirem)
         if (currentNode -> ptrRight != nullptr)
         {
             LinkedList::addElementEnd(&queueRear, currentNode -> ptrRight);
@@ -144,26 +158,31 @@ void tree::bfsTraversal(treeNode<T>* startingNode)
     }
 }
 
+// Função para buscar um valor específico na árvore utilizando BFS (Breadth-First Search)
 template<typename T>
 treeNode<T>* tree::searchBFS(treeNode<T>* startingNode, T value)
 {
     if (startingNode == nullptr) return nullptr;
     
+    // Inicializa uma fila para armazenar os nós da árvore a serem visitados
     Node<treeNode<T>*>* queueFront = nullptr;
     Node<treeNode<T>*>* queueRear = nullptr;
 
     LinkedList::addElementEnd(&queueRear, startingNode);
     queueFront = queueRear;
 
+    // Processa cada nó na fila até que todos os nós tenham sido visitados
     while (queueFront != nullptr)
     {
         treeNode<T>* currentNode = queueFront -> data;
 
+        // Verifica se o valor do nó atual corresponde ao valor procurado
         if (currentNode -> iPayload == value)
         {
             return currentNode;
         }
 
+        // Adiciona os filhos à esquerda do nó atual à fila (se existirem)
         if (currentNode -> ptrLeft != nullptr)
         {
             LinkedList::addElementEnd(&queueRear, currentNode -> ptrLeft);
@@ -173,6 +192,7 @@ treeNode<T>* tree::searchBFS(treeNode<T>* startingNode, T value)
             }
         }
 
+        // Adiciona os filhos à direita do nó atual à fila (se existirem)
         if (currentNode -> ptrRight != nullptr)
         {
             LinkedList::addElementEnd(&queueRear, currentNode -> ptrRight);
@@ -187,37 +207,43 @@ treeNode<T>* tree::searchBFS(treeNode<T>* startingNode, T value)
     return nullptr;
 }
 
+// Função para calcular a altura da árvore
 template<typename T>
 int tree::treeHeight(treeNode<T>* startingtreeNode)
 {
     if (startingtreeNode == nullptr) return 0;
     else
     {
-        int iLeftHeight = treeHeight(startingtreeNode -> ptrLeft);
-        int iRightHeight = treeHeight(startingtreeNode -> ptrRight);
+        int iLeftHeight = treeHeight(startingtreeNode -> ptrLeft); // Calcula a altura da subárvore à esquerda de forma recursiva
+        int iRightHeight = treeHeight(startingtreeNode -> ptrRight); // Calcula a altura da subárvore à direita de forma recursiva
         
+         // Retorna a altura máxima entre as subárvores mais a raiz atual
         return max(iLeftHeight, iRightHeight) + 1;
     }
 }
 
+// Função para buscar um valor específico na árvore utilizando DFS (Depth-First Search)
 template<typename T>
 treeNode<T>* tree::dfsSearch(treeNode<T>* startingtreeNode, T value)
 {
     if (startingtreeNode == nullptr || startingtreeNode -> iPayload == value) return startingtreeNode;
-    
-    treeNode<T>* leftResult = dfsSearch(startingtreeNode -> ptrLeft, value);
+
+    // Realiza a busca recursivamente na subárvore à esquerda
+    treeNode<T>* leftResult = dfsSearch(startingtreeNode -> ptrLeft, value); 
     if (leftResult != nullptr) return leftResult;
     
+    // Se não encontrado na subárvore à esquerda, realiza a busca na subárvore à direita
     return dfsSearch(startingtreeNode -> ptrRight, value);
 }
 
+// Função para criar uma árvore binária com valores inteiros aleatórios
 void tree::randomtree(treeNode<int>*& root, int amount)
 {
     if (amount == 0) return;
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 1000);
+    std::uniform_int_distribution<> dis(1, 1000); // Distribuição uniforme de números inteiros no intervalo [1, 100]
 
     for (int count = 0; count < amount; count++)
     {
@@ -225,6 +251,7 @@ void tree::randomtree(treeNode<int>*& root, int amount)
     }
 }
 
+// Função para comparar o tempo de criação de uma árvore e de uma lista
 void tree::CompareTimeListTree(int iSize) 
 {
     int iCount = 0;
@@ -232,6 +259,7 @@ void tree::CompareTimeListTree(int iSize)
     {
         cout << "Teste " << iCount << endl;
 
+        // Tempo de criação da árvore
         auto timeStart = high_resolution_clock::now();
         treeNode<int>* node1 = nullptr; 
         tree::randomtree(node1, 100000);
@@ -240,6 +268,7 @@ void tree::CompareTimeListTree(int iSize)
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
         cout << "Tempo de criação de uma árvore = " << timeDuration.count() << " nanosegundos" << endl;
 
+        // Tempo de criação da lista
         timeStart = high_resolution_clock::now();
         Node<int>* node2 = nullptr;
         LinkedList::randomList(&node2, 100000);
@@ -252,6 +281,7 @@ void tree::CompareTimeListTree(int iSize)
     }
 }
 
+// Função para comparar o tempo de busca BFS e DFS
 void tree::CompareTimeBfsDfs(int iSize)
 {
     if (iSize == 0)
@@ -271,6 +301,7 @@ void tree::CompareTimeBfsDfs(int iSize)
         // Verifique se o valor realmente está na árvore
         root = tree::inserttreeNode(root, valueToSearch);
 
+        // Tempo de busca BFS
         auto timeStart = high_resolution_clock::now();
         tree::searchBFS(root, valueToSearch);
         auto timeStop = high_resolution_clock::now();
@@ -278,6 +309,7 @@ void tree::CompareTimeBfsDfs(int iSize)
         auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
         cout << "Tempo de busca BFS = " << timeDuration.count() << " nanosegundos" << endl;
 
+        // Tempo de busca DFS
         timeStart = high_resolution_clock::now();
         tree::dfsSearch(root, valueToSearch);
         timeStop = high_resolution_clock::now();
