@@ -99,25 +99,28 @@ Node<T>* LinkedList::duplicateList(Node<T>* list)
     return newList;
 }
 
+// Instâncias explícitas para int
 template Node<int>* LinkedList::newNode(int);
 template void LinkedList::addElementEnd(Node<int>**, int);
 template void LinkedList::showNode(Node<int>*);
 template void LinkedList::swapValue(Node<int>*, Node<int>*);
 template Node<int>* LinkedList::duplicateList(Node<int>*);
 
+// Instâncias explícitas para float
 template Node<float>* LinkedList::newNode(float);
 template void LinkedList::addElementEnd(Node<float>**, float);
 template void LinkedList::showNode(Node<float>*);
 template void LinkedList::swapValue(Node<float>*, Node<float>*);
 template Node<float>* LinkedList::duplicateList(Node<float>*);
 
+// Instâncias explícitas para char
 template Node<char>* LinkedList::newNode(char);
 template void LinkedList::addElementEnd(Node<char>**, char);
 template void LinkedList::showNode(Node<char>*);
 template void LinkedList::swapValue(Node<char>*, Node<char>*);
 template Node<char>* LinkedList::duplicateList(Node<char>*);
 
-// Instância explícita para newNode com tipo double
+// Instâncias explícitas para double
 template Node<double>* LinkedList::newNode(double);
 template void LinkedList::addElementEnd(Node<double>**, double);
 template void LinkedList::showNode(Node<double>*);
@@ -125,7 +128,7 @@ template void LinkedList::swapValue(Node<double>*, Node<double>*);
 template Node<double>* LinkedList::duplicateList(Node<double>*);
 
 
-// Instanciações explícitas para tipos treeNode<T>
+// Instanciações explícitas para tipos de treeNode<T>
 template void LinkedList::addElementEnd(Node<treeNode<int>*>**, treeNode<int>*);
 template void LinkedList::addElementEnd(Node<treeNode<double>*>**, treeNode<double>*);
 template void LinkedList::addElementEnd(Node<treeNode<float>*>**, treeNode<float>*);
