@@ -4,20 +4,21 @@
 #include <chrono>
 #include <random>
 
+// Método bubbleSort otimizado
 template<typename T>
 void BubbleSort::bubbleSort(Node<T>* lista, int iSize)
 {
-    bool bUnordered = false;
+    bool bUnordered = false; // Flag para verificar se houve troca
     int iLoop = 0;
     Node<T>* ptrTemp = nullptr;
     while (iLoop < iSize - 1)
     {
         Node<T>* current = lista;
-        while (current->ptrNext != ptrTemp)
+        while (current->ptrNext != ptrTemp) // Percorre a lista até o ponto ordenado
         {
             if (current->data > current->ptrNext->data)
             {
-                LinkedList::swapValue(current, current->ptrNext);
+                LinkedList::swapValue(current, current->ptrNext); // Troca os valores dos nós
                 bUnordered = true;
             }
             current = current->ptrNext;
@@ -28,6 +29,7 @@ void BubbleSort::bubbleSort(Node<T>* lista, int iSize)
     }
 }
 
+// Método bubbleSort não otimizado
 template<typename T>
 void BubbleSort::bubbleSortUnoptimized(Node<T>* lista, int iSize)
 {
@@ -36,11 +38,11 @@ void BubbleSort::bubbleSortUnoptimized(Node<T>* lista, int iSize)
     while (iCount < iSize - 1)
     {
         ptrTemp = lista;
-        while (ptrTemp->ptrNext != nullptr)
+        while (ptrTemp->ptrNext != nullptr) // Percorre a lista inteira
         {
             if (ptrTemp->data > ptrTemp->ptrNext->data)
             {
-                LinkedList::swapValue(ptrTemp, ptrTemp->ptrNext);
+                LinkedList::swapValue(ptrTemp, ptrTemp->ptrNext); // Troca os valores dos nós
             }
             ptrTemp = ptrTemp->ptrNext;
         }
@@ -48,6 +50,7 @@ void BubbleSort::bubbleSortUnoptimized(Node<T>* lista, int iSize)
     }
 }
 
+// Função para medir o tempo dos dois métodos de bubbleSort
 void BubbleSort::medetempoBubbleSort(int iSize)
 {
     int iCount = 0;
@@ -55,16 +58,18 @@ void BubbleSort::medetempoBubbleSort(int iSize)
     {
         std::cout << "Teste " << iCount << std::endl;
         Node<int>* node1 = nullptr;
-        LinkedList::randomList(&node1, 10000);
-        Node<int>* node2 = LinkedList::duplicateList(node1);
+        LinkedList::randomList(&node1, 10000); // Gera uma lista aleatória
+        Node<int>* node2 = LinkedList::duplicateList(node1); // Duplica a lista
 
+        // Mede o tempo da versão não otimizada
         auto timeStart = std::chrono::high_resolution_clock::now();
-        bubbleSortUnoptimized(node1, 10000);
+        bubbleSortUnoptimized(node1, 10000); 
         auto timeStop = std::chrono::high_resolution_clock::now();
 
         auto timeDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(timeStop - timeStart);
         std::cout << "Tempo de compila��o n�o otimizada = " << timeDuration.count() << std::endl;
 
+        // Mede o tempo da versão otimizada
         timeStart = std::chrono::high_resolution_clock::now();
         bubbleSort(node2, 10000);
         timeStop = std::chrono::high_resolution_clock::now();
