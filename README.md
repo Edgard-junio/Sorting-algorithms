@@ -1,6 +1,6 @@
 # Sorting-algorithms
 
-Nesse repositório, serão apresentados dois algorítimos de ordenação, bubbleSort e selectioSort, ambos aplicados em listas duplamente encadeadas:
+Nesse repositório, serão apresentados alguns algoritmos de ordenação e uma estruturação de árvore:
 
 ## bubbleSort
 O Bubble Sort é um algoritmo simples de ordenação que percorre repetidamente a lista, compara elementos adjacentes e os troca se estiverem na ordem errada. É um algoritmo intuitivo, mas não muito eficiente para grandes conjuntos de dados.
